@@ -1,0 +1,4 @@
+<!doctype html><script>
+window.addEventListener('message',async e=>{const f=e.data&&e.data.f;if(!f)return;try{const r=await fetch('i/'+f);const b=await r.arrayBuffer();parent.postMessage({f,b},'*',[b])}catch(err){parent.postMessage({f,err:String(err)},'*')}});
+parent.postMessage({ready:1},'*');
+</script>
